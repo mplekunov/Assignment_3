@@ -20,7 +20,7 @@ public class Main {
         writeNames(sortedList, fileName);
     }
 
-    private static String openFile() throws IOException {
+    public static String openFile() throws IOException {
         String fileName = "output.txt";
         System.out.printf("Name of the file for output specified by default is %s", fileName);
 
@@ -52,7 +52,7 @@ public class Main {
         return fileName;
     }
 
-    private static List<Name> readNames() {
+    public static List<Name> readNames() {
         System.out.println("Enter list of name in the format: \"Last Name, First Name\"" +
                            "\nEnter \"done\" when you are done with input");
 
@@ -73,7 +73,7 @@ public class Main {
         return nameList;
     }
 
-    private static void writeNames(List<Name> names, String fileName) throws IOException {
+    public static void writeNames(List<Name> names, String fileName) throws IOException {
         OutputName outputName = new OutputName(names, fileName);
         outputName.write();
     }

@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Main {
+    +main()
+
+    +openFile(): String
+    +readNames(): List<Name>
+    +writeNames(names: List<Name>, fileName: String)
+}
+
+@enduml
