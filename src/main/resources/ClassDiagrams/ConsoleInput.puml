@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/class-diagram
+class ConsoleInput implements Input {
+    -scanner: Scanner
+
+    +ConsoleInput()
+}
+
+interface Input {
+    +read(): T
+}
+
+@enduml
