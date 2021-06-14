@@ -2,8 +2,8 @@
 'https://plantuml.com/class-diagram
 
 class OutputName implements Output {
-    #names: List<Name>
-    #fileName: String
+    -names: List<Name>
+    -fileName: String
 
     +OutputName(names: List<Name>, fileName: String)
 }
