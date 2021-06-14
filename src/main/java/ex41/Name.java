@@ -6,12 +6,27 @@ import org.jetbrains.annotations.NotNull;
  * Stores Information about Name object
  */
 public class Name implements Comparable<Name> {
-
-    private String firstName;
-    private String lastName;
+    /**
+     * The first name of Name object
+     */
+    private final String firstName;
+    /**
+     * The last name of Name object
+     */
+    private final String lastName;
 
     /**
-     * Returns the frstName field of this object
+     * Default constructor for Name object.
+     * @param firstName first name
+     * @param lastName last name
+     */
+    public Name(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    /**
+     * Returns the firstName field of this object
      * @return string representing firstName field
      */
     public String getFirstName() {

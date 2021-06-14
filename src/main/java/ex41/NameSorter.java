@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  * Sorts Name object in the given format
  */
 public class NameSorter implements Sorter<Name> {
-    private List<Name> names;
+    private final List<Name> names;
 
     /**
      * Constructs an empty NameSorter object.
@@ -34,7 +34,7 @@ public class NameSorter implements Sorter<Name> {
     }
 
     @Override
-    public List<Name> sort(List<Name> names) {
+    public List<Name> sort() {
         return names.stream().sorted(Comparator.comparing(Name::getLastName)).collect(Collectors.toList());
     }
 }
