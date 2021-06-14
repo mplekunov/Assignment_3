@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Ask to print Names in the specific format;
+
+    while(user_input != keyword)
+        :Read Input from Console;
+        if (user_input != keyword) then
+            #yellow:Convert user_input to Name object;
+            :Add Name object to collection;
+        endif
+    endwhile
+
+   #palegreen:Return Collection of Name objects;
+stop
+
+@enduml

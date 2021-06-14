@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Define fileName;
+    while (File fileName exists)
+        :Ask user if they want to change name of the output file;
+        :Read user_input;
+
+        switch (user_input?)
+        case (Yes)
+            :Ask for the new name of the file;
+            :Assign new name to the fileName;
+        case (No)
+            :Do nothing;
+        endswitch
+
+        if (user_input?) is (No) then
+            break
+        endif
+    endwhile
+
+    :Return fileName;
+stop
+
+@enduml

@@ -6,7 +6,7 @@ class Main {
 
     +openFile(): String
     +readNames(): List<Name>
-    +writeNames(names: List<Name>, fileName: String)
+    +writeNames(names: List<Name>, fileName: String): void
 }
 
 @enduml

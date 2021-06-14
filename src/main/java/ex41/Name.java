@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Mikhail Plekunov
+ */
+
 package ex41;
 
 import org.jetbrains.annotations.NotNull;
@@ -6,13 +11,7 @@ import org.jetbrains.annotations.NotNull;
  * Stores Information about Name object
  */
 public class Name implements Comparable<Name> {
-    /**
-     * The first name of Name object
-     */
     private final String firstName;
-    /**
-     * The last name of Name object
-     */
     private final String lastName;
 
     /**

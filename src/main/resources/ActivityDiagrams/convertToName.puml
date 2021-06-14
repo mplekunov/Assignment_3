@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Take full name;
+    #yellow:Divide full name on first name and last name;
+    #palegreen:Return obj storing firstName and lastName;
+stop
+
+@enduml

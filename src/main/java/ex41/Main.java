@@ -20,6 +20,11 @@ public class Main {
         writeNames(sortedList, fileName);
     }
 
+    /**
+     * Tries to open file using pre-defined file name. If file already exists, asks
+     * @return Name of the file in String format
+     * @throws IOException - if problem occurs during writing
+     */
     public static String openFile() throws IOException {
         String fileName = "output.txt";
         System.out.printf("Name of the file for output specified by default is %s", fileName);

@@ -5,9 +5,9 @@ class Name {
     #firstName: String
     #lastName: String
 
-    +getFirstName()
-    +getLastName()
+    +getFirstName(): String
+    +getLastName(): String
 
-    +compareTo()
+    +compareTo(): int
 }
 @enduml

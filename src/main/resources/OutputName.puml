@@ -9,6 +9,6 @@ class OutputName implements Output {
 }
 
 interface Output {
-    +write()
+    +write(): void
 }
 @enduml

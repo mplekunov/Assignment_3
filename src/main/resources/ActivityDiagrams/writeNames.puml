@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Take Collection of Name objects;
+    #yellow:Write each Name object into the file;
+stop
+
+@enduml

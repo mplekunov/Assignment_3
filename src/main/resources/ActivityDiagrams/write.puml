@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:OpenFile;
+:Write into file the size of output;
+
+while (foreach element in collection)
+    if (CanWriteData) is (True) then
+        :Write FirstName and LastName;
+    else
+        #pink:throw exception;
+        kill
+    endif
+endwhile
+:CloseFile;
+stop
+
+@enduml
