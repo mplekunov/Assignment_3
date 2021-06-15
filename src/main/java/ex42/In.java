@@ -1,6 +1,10 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Mikhail Plekunov
+ */
+
 package ex42;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface In {

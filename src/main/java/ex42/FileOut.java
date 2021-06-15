@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Mikhail Plekunov
+ */
+
 package ex42;
 
 import java.io.FileWriter;
@@ -7,15 +12,17 @@ import java.util.Locale;
 
 public class FileOut implements Out{
     private String fileName;
+    private final String path;
     private final FileWriter bWriter;
 
     public FileOut(String fileName) throws IOException {
-        this.fileName = fileName;
+        this.fileName = fileName.substring(fileName.lastIndexOf("\\") + 1);
+        this.path = fileName.substring(0, fileName.lastIndexOf("\\") + 1);
         this.bWriter = initWriter();
     }
 
     private FileWriter initWriter() throws IOException {
-        java.io.File file = new java.io.File(fileName);
+        java.io.File file = new java.io.File(path + fileName);
 
         while (!file.createNewFile()) {
             System.out.printf("File with the name %s already exists. Do you want to choose another output file? (Yes/No): ", fileName);
@@ -28,7 +35,7 @@ public class FileOut implements Out{
                 case "yes":
                     System.out.print("Enter new name for the output file (e.g. output.txt): ");
                     fileName = input.readLine();
-                    file = new java.io.File(fileName);
+                    file = new java.io.File(path + fileName);
                     break;
                 case "no":
                     break;
@@ -43,7 +50,7 @@ public class FileOut implements Out{
         if (!file.canWrite())
             throw new NonWritableChannelException();
 
-        return new FileWriter(fileName);
+        return new FileWriter(path + fileName);
     }
 
     public String getFileName() {
