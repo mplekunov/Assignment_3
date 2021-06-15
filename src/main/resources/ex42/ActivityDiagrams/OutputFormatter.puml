@@ -2,14 +2,14 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get Employee object;
-    :Get Table format;
-    while (for each element in table)
-        :Add the columnSpan to the format String;
+    :Get Collection of Employee objects;
+    :Find max length for each property of Employee;
+    while (for each Employee in collection)
+        :Convert Employee object into strings;
+        :Add them to the output using specific format;
     endwhile
 
-    :Convert Employee object to String using specific format;
-    #palegreen:Return String;
+    #palegreen:Return complete output String;
     kill
 
 @enduml

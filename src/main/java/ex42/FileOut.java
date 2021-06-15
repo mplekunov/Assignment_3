@@ -1,24 +1,59 @@
 package ex42;
 
-public class FileOut implements File, Out{
-    private String fileName;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.channels.NonWritableChannelException;
+import java.util.Locale;
 
-    public FileOut(String fileName) {
+public class FileOut implements Out{
+    private String fileName;
+    private final FileWriter bWriter;
+
+    public FileOut(String fileName) throws IOException {
         this.fileName = fileName;
+        this.bWriter = initWriter();
     }
 
-    @Override
+    private FileWriter initWriter() throws IOException {
+        java.io.File file = new java.io.File(fileName);
+
+        while (!file.createNewFile()) {
+            System.out.printf("File with the name %s already exists. Do you want to choose another output file? (Yes/No): ", fileName);
+
+            Input input = new Input(System.in);
+
+            String answer = input.readLine();
+
+            switch (answer.toLowerCase(Locale.ROOT)) {
+                case "yes":
+                    System.out.print("Enter new name for the output file (e.g. output.txt): ");
+                    fileName = input.readLine();
+                    file = new java.io.File(fileName);
+                    break;
+                case "no":
+                    break;
+                default:
+                    System.out.println("System couldn't recognize your answer, please try again");
+            }
+
+            if (answer.toLowerCase(Locale.ROOT).equals("no"))
+                break;
+        }
+
+        if (!file.canWrite())
+            throw new NonWritableChannelException();
+
+        return new FileWriter(fileName);
+    }
+
     public String getFileName() {
         return fileName;
     }
 
     @Override
-    public java.io.File openFile() {
-        return null;
+    public void writeLine(String input) throws IOException {
+        bWriter.write(input);
     }
 
-    @Override
-    public void writeLine() {
-
-    }
+    public void close() throws IOException {bWriter.close();}
 }

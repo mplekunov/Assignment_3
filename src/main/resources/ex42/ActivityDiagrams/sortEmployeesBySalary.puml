@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get collection of Employee objects;
+    :Sort this collection by Salary;
+    #palegreen:Return sorted collection;
+    kill
+@enduml

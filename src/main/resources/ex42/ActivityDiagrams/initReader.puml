@@ -3,6 +3,7 @@
 
 start
     :Get input fileName;
+    :Create new Instance of a File;
 
     if (fileName doesn't Exists) is (True) then
         #pink:Throw exception;
@@ -13,7 +14,7 @@ start
         #pink:Throw exception;
         kill
     else (Yes)
-        #palegreen:Return fileName;
+        #palegreen:Return File;
         kill
 
 @enduml

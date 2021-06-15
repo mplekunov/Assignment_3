@@ -1,0 +1,7 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Sort {
+    +List<Employee> SortEmployeesBySalary(employees)
+}
+@enduml

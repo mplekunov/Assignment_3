@@ -1,5 +1,7 @@
 package ex42;
 
+import java.io.IOException;
+
 public interface Out {
-    void writeLine();
+    void writeLine(String input) throws IOException;
 }

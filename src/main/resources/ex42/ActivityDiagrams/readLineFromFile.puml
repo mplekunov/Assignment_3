@@ -2,8 +2,8 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get input fileName;
-    :Read line from fileName;
+    :Get input File;
+    :Read line from File;
     #palegreen:Return String;
     kill
 

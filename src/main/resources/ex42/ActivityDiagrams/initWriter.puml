@@ -3,21 +3,27 @@
 
 start
     :Get output fileName;
-
+    :Create new instance of File;
     while (fileName -> Exists)
         :Ask user to change fileName;
 
-        if (Answer) is (No) then
+        switch (Answer)
+        case (No)
             :Use the fileName provided by default;
-            break
-        else (Yes)
+        case (Yes)
             :Read new fileName;
-            :Assign new fileName to fileName;
+            :Assign new fileName to File;
+        case (default)
+            :Incorrect input, print prompt again;
+        endswitch
+
+        if (answer == no) is (Yes) then
+            break;
         endif
     endwhile
 
     if (Is it possible to write into file?) is (Yes) then
-        #palegreen:Return fileName;
+        #palegreen:Return File;
         kill
     else (No)
         #pink:Throw exception;

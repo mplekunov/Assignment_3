@@ -13,6 +13,10 @@ class FileIn implements In, File {
     +FileIn(fileName)
 }
 
+class ConsoleInput implements In {
+    -Scanner: scanner
+}
+
 interface Out {
     +void: writeLine()
 }
