@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class OutputFormatter {
+    -String: header;
+
+    +OutputFormatter()
+    +String: convertEmployeeToString(employeeToConvert)
+}
+
+@enduml

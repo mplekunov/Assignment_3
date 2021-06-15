@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get output fileName;
+
+    while (fileName -> Exists)
+        :Ask user to change fileName;
+
+        if (Answer) is (No) then
+            :Use the fileName provided by default;
+            break
+        else (Yes)
+            :Read new fileName;
+            :Assign new fileName to fileName;
+        endif
+    endwhile
+
+    if (Is it possible to write into file?) is (Yes) then
+        #palegreen:Return fileName;
+        kill
+    else (No)
+        #pink:Throw exception;
+        kill
+
+@enduml

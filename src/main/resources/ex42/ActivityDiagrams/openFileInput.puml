@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get input fileName;
+
+    if (fileName doesn't Exists) is (True) then
+        #pink:Throw exception;
+        kill
+    endif
+
+    if (Is it possible to read file?) is (No) then
+        #pink:Throw exception;
+        kill
+    else (Yes)
+        #palegreen:Return fileName;
+        kill
+
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class InputFormatter {
+
+    +Employee: convertStringToEmployee(stringToConvert)
+}
+
+@enduml

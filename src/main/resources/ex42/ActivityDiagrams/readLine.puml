@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get input fileName;
+    :Read line from fileName;
+    #palegreen:Return String;
+    kill
+
+@enduml

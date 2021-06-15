@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Employee {
+    -String: firstName
+    -String: lastName
+    -double: salary
+
+    +Employee(firstName, lastName, salary)
+    +String: getFirstName()
+    +String: getLastName()
+    +double: getSalary()
+}
+
+@enduml

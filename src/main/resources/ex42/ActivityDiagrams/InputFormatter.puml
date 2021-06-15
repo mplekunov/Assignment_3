@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get String;
+    :Convert String to Employee object;
+    #palegreen:Return Employee object;
+    kill
+
+@enduml

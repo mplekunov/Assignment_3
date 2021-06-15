@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get output fileName;
+    :Write line into fileName;
+    kill
+
+@enduml

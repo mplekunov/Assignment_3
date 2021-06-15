@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    #palegreen:Return salary;
+    kill
+
+@enduml

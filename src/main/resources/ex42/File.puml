@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class FileOut implements Out, File{
+    -String: fileName
+
+    +FileOut()
+}
+
+class FileIn implements In, File {
+    -String: fileName
+
+    +FileIn()
+}
+
+interface Out {
+    +void: writeLine()
+}
+
+interface In {
+    +String: readLine();
+}
+
+interface File {
+    +String: getFileName()
+    +void: openFile()
+}
+
+
+
+
+
+
+@enduml
