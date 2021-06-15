@@ -3,6 +3,11 @@
 
 start
     :Get Employee object;
+    :Get Table format;
+    while (for each element in table)
+        :Add the columnSpan to the format String;
+    endwhile
+
     :Convert Employee object to String using specific format;
     #palegreen:Return String;
     kill

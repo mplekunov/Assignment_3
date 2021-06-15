@@ -4,13 +4,13 @@
 class FileOut implements Out, File{
     -String: fileName
 
-    +FileOut()
+    +FileOut(fileName)
 }
 
 class FileIn implements In, File {
     -String: fileName
 
-    +FileIn()
+    +FileIn(fileName)
 }
 
 interface Out {
@@ -23,7 +23,7 @@ interface In {
 
 interface File {
     +String: getFileName()
-    +void: openFile()
+    +File: openFile()
 }
 
 
