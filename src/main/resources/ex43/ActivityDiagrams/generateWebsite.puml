@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get website;
+
+    while (For each pair in additionalFolders)
+        :Get folderName;
+        :Call generateFolder();
+    endwhile;
+
+    :Call generateIndexFile();
+
+    :Return operation status;
+@enduml

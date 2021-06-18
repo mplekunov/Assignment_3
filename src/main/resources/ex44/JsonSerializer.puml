@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class JsonSerializer {
+    -JsonSerializer()
+
+    +String: serialize(product)
+    +String: serialize(productCollection)
+
+}
+
+@enduml

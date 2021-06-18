@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get File;
+    :Get Item or Collection of Items;
+    :Append Item or Collection of items into File;
+@enduml

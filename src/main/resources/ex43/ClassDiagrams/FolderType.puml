@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+enum FolderType {
+    CSS,
+    JS
+}
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get relativePath;
+    :Get fileName;
+
+    if (File with fileName) is (Exists) then
+        #pink:throw exception;
+        kill
+    endif
+
+    :Create File;
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class FileManager {
+    -String: relativePath;
+
+    +FileManager(relativePath)
+
+    +String: createFolder(folderName)
+    +String: createFile(fileName)
+}
+@enduml

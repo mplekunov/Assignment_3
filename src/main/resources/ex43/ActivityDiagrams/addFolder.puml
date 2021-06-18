@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get Folder name;
+    :Get Folder Type;
+
+    if (additionalFolders have Type) is (Yes) then
+        #pink:throw exception Type duplicate;
+        kill
+    endif
+    if (additionalFolders have name) is (Yes) then
+        #pink:throw exception name duplicate;
+        kill
+    endif
+
+    :add Type, name pair into additionalFolders;
+@enduml

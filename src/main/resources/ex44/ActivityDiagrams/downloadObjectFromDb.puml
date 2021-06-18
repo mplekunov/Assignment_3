@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get File;
+    :Deserialize File content into Item collection;
+    :Return Item collection;
+
+@enduml

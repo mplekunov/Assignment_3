@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get relativePath;
+    :Get folderName;
+
+    if (Folder with folderName) is (Exists) then
+        #pink:throw exception;
+        kill
+    endif
+    :Create Folder;
+    kill
+
+@enduml

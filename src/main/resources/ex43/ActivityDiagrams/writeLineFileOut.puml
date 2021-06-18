@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get file instance;
+    :Get input;
+    :write line into file;
+
+@enduml

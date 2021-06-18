@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get console input stream;
+    :Write line into console;
+
+@enduml

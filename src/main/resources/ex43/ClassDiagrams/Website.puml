@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Website {
+    -String: websiteName;
+    -String: author;
+    -HashMap<FolderType, String>: additionalFolders;
+
+    +Website(websiteName, author)
+    +Website(websiteName, author, additionalFolders)
+
+    +void: addFolder(folderType, folderName)
+    +String: getWebsiteName()
+    +String getAuthorName()
+    +HashMap<FolderType, String>: getFolders()
+}
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get Product;
+    while (for each product)
+        :serialize it into Gson object;
+    endwhile
+
+   :Return String in Json format;
+
+@enduml

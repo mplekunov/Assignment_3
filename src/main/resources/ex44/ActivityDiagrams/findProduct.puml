@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get Collection of products;
+    while(For each product in Collection)
+        if (name == name in collection)
+            :Item Found, Return Item;
+            kill
+        endif
+    endwhile
+
+    :No product Found, return Null;
+@enduml
