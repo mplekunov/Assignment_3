@@ -8,10 +8,11 @@ class ConsoleIn implements Input {
 }
 
 class FileIn implements Input{
-    -File file
+    -Scanner: scanner
 
     +FileIn(relativePath, fileName)
 
+    +String: readAllLines()
     +void: close()
 }
 

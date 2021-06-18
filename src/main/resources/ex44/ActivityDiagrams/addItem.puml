@@ -2,11 +2,11 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    if (findProduct(product)) is (true) then
-        :throw exception;
-        kill
-    endif
-    :uploadObjectToDb(product);
-    :downloadObjectFromDb();
-    :return true;
+    :Get object;
+    while (for each object in dbObjects)
+        if (object name exists in dbObjects) is (Yes) then
+            :throw exception;
+        endif
+    endwhile
+    :uploadObjectToDb(object);
 @enduml

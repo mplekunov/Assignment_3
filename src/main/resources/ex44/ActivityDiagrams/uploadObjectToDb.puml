@@ -3,6 +3,7 @@
 
 start
     :Get File;
-    :Get Item or Collection of Items;
-    :Append Item or Collection of items into File;
+    :Add object into dbObjects;
+    :Serialize dbObjects;
+    :Write serialized string into file;
 @enduml

@@ -3,9 +3,6 @@
 
 start
     :Get String in Json format;
-
     :Deserialize string into objects;
-
     :Return Objects;
-
 @enduml

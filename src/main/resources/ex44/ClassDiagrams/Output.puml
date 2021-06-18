@@ -6,7 +6,7 @@ class ConsoleOut implements Output {
 }
 
 class FileOut implements Output {
-    -File file
+    -BufferedWriter: bWriter
 
     +FileOut(relativePath, fileName)
 

@@ -14,11 +14,6 @@
       "name": "Doodad",
       "price": 5.0,
       "quantity": 10
-    },
-    {
-      "name": "Test",
-      "price": 15.0,
-      "quantity": 42
     }
   ]
 }

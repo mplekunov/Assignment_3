@@ -1,11 +1,18 @@
 package ex44;
 
+import com.google.gson.reflect.TypeToken;
+
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.nio.file.Paths;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        var productDatabase = new ProductDatabase(Paths.get("").toAbsolutePath().toString().concat("\\src\\main\\java\\ex44"), "exercise44_input.json");
+        Type productToken = new TypeToken<Database<Product>>(){}.getType();
+        var file = new File(Paths.get("").toAbsolutePath().toString().concat("\\src\\main\\java\\ex44\\"), "exercise44_input.json");
+
+        var productDb = new Database<Product>(file, productToken);
+
         var cin = new ConsoleIn();
         var cout = new ConsoleOut();
 
@@ -13,7 +20,7 @@ public class Main {
         while (true) {
             cout.writeLine("What is the product name? ");
             var input = cin.readLine();
-            product = productDatabase.findProduct(input);
+            product = productDb.findObject(input);
 
             if (product == null) {
                 cout.writeLine("Do you want to add product? (Y/N): ");
@@ -29,7 +36,7 @@ public class Main {
                     cout.writeLine("Enter product Quantity: ");
                     var quantity = cin.readLine();
 
-                    productDatabase.addProduct(new Product(name, Double.parseDouble(price), Integer.parseInt(quantity)));
+                    productDb.addObject(new Product(name, Double.parseDouble(price), Integer.parseInt(quantity)));
                     break;
                 }
             } else {

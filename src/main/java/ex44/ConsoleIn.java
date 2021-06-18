@@ -2,7 +2,7 @@ package ex44;
 
 import java.util.Scanner;
 
-public class ConsoleIn implements Input{
+public class ConsoleIn {
     private final Scanner scanner;
 
     public ConsoleIn() {
@@ -13,7 +13,6 @@ public class ConsoleIn implements Input{
         this.scanner.close();
     }
 
-    @Override
     public String readLine() {
         return scanner.nextLine();
     }

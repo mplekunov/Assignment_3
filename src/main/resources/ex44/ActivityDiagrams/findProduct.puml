@@ -2,13 +2,14 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get Collection of products;
-    while(For each product in Collection)
-        if (name == name in collection)
-            :Item Found, Return Item;
-            kill
+    while (for each object in dbObjects)
+        :compare name provided through input with the name ob objects in dbObjects;
+        if (names equal) is (True) then
+            :Return an object with equal name;
         endif
     endwhile
 
-    :No product Found, return Null;
+   if (no object found) then
+        :Return null;
+
 @enduml

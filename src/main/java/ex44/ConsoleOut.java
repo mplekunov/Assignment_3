@@ -1,10 +1,15 @@
 package ex44;
 
-public class ConsoleOut implements Output {
-    public ConsoleOut() {}
+import java.io.PrintStream;
 
-    @Override
+public class ConsoleOut {
+    private final PrintStream printStream;
+
+    public ConsoleOut() {
+        this.printStream = System.out;
+    }
+
     public void writeLine(String input) {
-        System.out.print(input);
+        printStream.print(input);
     }
 }

@@ -1,5 +1,7 @@
 package ex44;
 
+import java.util.Objects;
+
 public class Product {
     private final String name;
     private final double price;
@@ -21,5 +23,25 @@ public class Product {
 
     public double getPrice() {
         return price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null) return false;
+
+        if (o.getClass() == getClass()) {
+            Product product = (Product) o;
+            return Objects.equals(name.toLowerCase(), product.getName().toLowerCase()) && Double.compare(price, product.price) == 0 && quantity == product.quantity;
+        } else if (o.getClass() == String.class) {
+            String input = (String) o;
+            return Objects.equals(name.toLowerCase(), input.toLowerCase());
+        } else
+            return false;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s\nPrice: %.2f\nQuantity: %d\n", name, price, quantity);
     }
 }

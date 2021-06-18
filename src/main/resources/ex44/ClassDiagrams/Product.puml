@@ -11,6 +11,10 @@ class Product {
     +String: getName()
     +double: getPrice()
     +int: getQuantity()
+
+    +bool: equals(object)
+    +String: toString()
+
 }
 
 @enduml
