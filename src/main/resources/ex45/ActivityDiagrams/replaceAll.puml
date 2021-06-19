@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get text;
+    :Get match_word;
+    :Get replacement_word;
+
+    while(there are words to check)
+        if (match_word) is (Found) then
+            :replace word with replacement_word;
+            :counter++;
+        endif
+    endwhile
+    :Return counter;
+    kill
+
+start
+    :Get text;
+    :Get collection of maps;
+    while(for each map entry)
+        :counter += replaceAll();
+    endwhile
+    :Return counter;
+    kill
+@enduml

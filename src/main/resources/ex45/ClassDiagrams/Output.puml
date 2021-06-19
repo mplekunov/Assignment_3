@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ConsoleOut {
+    -PrintStream: printStream;
+
+    +ConsoleOut()
+
+    +void: writeLine(input)
+}
+
+@enduml

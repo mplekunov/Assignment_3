@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ConsoleIn {
+    -Scanner: scanner;
+
+    +ConsoleIn()
+
+    +String: readLine()
+}
+
+@enduml
