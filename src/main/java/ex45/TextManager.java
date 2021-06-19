@@ -2,6 +2,8 @@ package ex45;
 
 import org.javatuples.Pair;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TextManager {
     private String text;
@@ -11,8 +13,15 @@ public class TextManager {
     }
 
     public int replaceAll(String match, String replacement) {
-        if (text.contains(match)) {
-            text = text.replaceFirst(match, replacement);
+        Pattern p = Pattern.compile("(\\b"+match+")(?=([a-z]{0,2}(([\"\']\\s)|(\\s)|([.,:;!?]))))");
+        Matcher m = p.matcher(text);
+
+        if (m.find()) {
+            if (replacement.equals(""))
+                text = text.replaceFirst("(\\b"+match+"\\s)", replacement);
+            else
+                text = text.replaceFirst(p.pattern(), replacement);
+
             return 1 + replaceAll(match, replacement);
         }
 

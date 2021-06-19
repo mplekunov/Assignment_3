@@ -2,6 +2,10 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
+    'This is recursive function that replaces match_word and counts'
+    'number of replacements (number of function calls) it made and'
+    'returns that value'
+
     :Get text;
     :Get match_word;
     :Get replacement_word;
@@ -9,16 +13,16 @@ start
     while(there are words to check)
         if (match_word) is (Found) then
             :replace word with replacement_word;
-            :counter++;
+            : 1 + call function again (recursively);
         endif
     endwhile
-    :Return counter;
+    :Return 0;
     kill
 
 start
     :Get text;
-    :Get collection of maps;
-    while(for each map entry)
+    :Get collection of pairs;
+    while(for each pair)
         :counter += replaceAll();
     endwhile
     :Return counter;
