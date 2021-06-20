@@ -2,12 +2,16 @@
 'https://plantuml.com/class-diagram
 
 class Name {
-    -firstName: String
-    -lastName: String
+    -String firstName
+    -String lastName
 
-    +getFirstName(): String
-    +getLastName(): String
+    +Name(String firstName, String lastName)
 
-    +compareTo(): int
+    +String getFirstName()
+    +String getLastName()
+
+    +int compareTo(Name name)
+
 }
+
 @enduml

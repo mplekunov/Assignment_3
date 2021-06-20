@@ -2,9 +2,10 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Take full name;
-    #yellow:Divide full name on first name and last name;
-    #palegreen:Return obj storing firstName and lastName;
-stop
+    :Get String;
+    :Split string using "," delimiter;
+    :Collect string into an array;
+    :Put Strings into Name object;
+    :Return Name object;
 
 @enduml

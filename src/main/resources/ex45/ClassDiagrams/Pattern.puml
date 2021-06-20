@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Pattern {
+    -Pattern()
+
+    +List<Pair<String, String>> convert(String pattern)
+}
+@enduml

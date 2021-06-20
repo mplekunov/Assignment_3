@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get employees collection;
+    :Find max fistName length;
+    :Find max lastName length;
+    :Find max salary length;
+
+    while(for each employee in employees collection)
+        :Format employee object to string;
+        :Add string to output;
+    endwhile
+
+    :Return output;
+@enduml

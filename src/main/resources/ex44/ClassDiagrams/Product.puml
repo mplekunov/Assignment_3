@@ -2,19 +2,18 @@
 'https://plantuml.com/class-diagram
 
 class Product {
-    -String: name;
-    -double: price;
-    -int: quantity;
+    -String name
+    -double price
+    -int quantity
 
-    +Product(name, price, quantity)
+    +Product(String name, double price, int quantity)
 
-    +String: getName()
-    +double: getPrice()
-    +int: getQuantity()
+    +String getName()
+    +int getQuantity()
+    +double getPrice()
 
-    +bool: equals(object)
-    +String: toString()
-
+    +boolean equals(Object o)
+    +String toString()
 }
 
 @enduml

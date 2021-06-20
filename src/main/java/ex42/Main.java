@@ -20,7 +20,7 @@ public class Main {
 
         List<Employee> employees = InputFormatter.convertStringToEmployee(input);
 
-        List<Employee> employeesSortedBySalary = Sort.sortEmployeesByCollection(employees);
+        List<Employee> employeesSortedBySalary = Sort.sortEmployeesBySalary(employees);
 
         fileOut.writeLine(OutputFormatter.convertEmployeeToString(employeesSortedBySalary));
     }

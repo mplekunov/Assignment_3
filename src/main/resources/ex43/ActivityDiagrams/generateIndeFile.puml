@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get website title;
+    :Get authout name;
+
+    :Create Index file using proper format;
+
+    :Return success message;
+
+@enduml

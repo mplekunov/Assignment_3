@@ -2,11 +2,11 @@
 'https://plantuml.com/class-diagram
 
 class TextManager {
-    -String: text
+    -String text
 
-    +TextManager()
+    +TextManager(String text)
 
-    +HashMap<String, Integer>: countWords(text)
+    +HashMap<String, Integer> countWords()
 }
 
 @enduml

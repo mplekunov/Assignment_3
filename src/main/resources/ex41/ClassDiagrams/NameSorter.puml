@@ -1,15 +1,14 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class NameSorter implements Sorter {
-    -names: List<Name>
+class NameSorter {
+    -List<Name> names
 
     -NameSorter()
-    +NameSorter(nameCollection: List<Name>)
-}
 
-interface Sorter {
-    +sort(): List<T>
+    +NameSorter(List<Name> nameCollection)
+
+    +List<Name> sort()
 }
 
 @enduml

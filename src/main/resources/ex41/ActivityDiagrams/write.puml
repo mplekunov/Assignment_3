@@ -2,18 +2,12 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-:OpenFile;
-:Write into file the size of output;
+    :Get name collection;
 
-while (foreach element in collection)
-    if (CanWriteData) is (True) then
-        :Write FirstName and LastName;
-    else
-        #pink:throw exception;
-        kill
-    endif
-endwhile
-:CloseFile;
-stop
+    while (for each name object in name collection )
+        :Format Name to String;
+        :Add String to output;
+    endwhile
 
+    :Return output;
 @enduml

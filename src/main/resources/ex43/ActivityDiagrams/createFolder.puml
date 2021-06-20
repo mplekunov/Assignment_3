@@ -2,14 +2,18 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get relativePath;
-    :Get folderName;
+    :Get folder name;
+    :Get folder path;
 
-    if (Folder with folderName) is (Exists) then
-        #pink:throw exception;
+    if (folder with such name already exists) then
+        :throw an exception;
+    endif
+
+    if (create_folder()) is (True) then
+        :Return success message;
+        kill
+    else
+        :Return error message;
         kill
     endif
-    :Create Folder;
-    kill
-
 @enduml

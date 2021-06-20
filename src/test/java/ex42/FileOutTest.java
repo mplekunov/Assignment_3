@@ -28,11 +28,11 @@ class FileOutTest {
     void writeLine() throws IOException {
         System.setIn(new ByteArrayInputStream(("no").getBytes())); //ignores FileIn question
 
-//        FileOut out = new FileOut("src\\test\\java\\ex42\\writeLine.txt");
-//        FileIn in = new FileIn("src\\test\\java\\ex42\\writeLine.txt");
-//
-//        out.writeLine("Test Line");
-//        out.close();
-//        assertEquals("Test Line", in.readLine());
+        var fileOut = new File("src\\test\\java\\ex42\\", "writeLine.txt");
+        var fileIn = new File("src\\test\\java\\ex42\\", "writeLine.txt");
+
+        fileOut.writeLine("Test Line");
+
+        assertEquals("Test Line", fileIn.readAllLines());
     }
 }

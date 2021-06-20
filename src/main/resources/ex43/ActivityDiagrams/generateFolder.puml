@@ -2,10 +2,11 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get folderName;
-    :Get relativePath;
+    :Get folder name;
+    :Get folder path;
 
-    :Call createFolder();
-    :Return operation status;
+    :createFolder(folderName) and add status message to output;
+
+    :Return output string;
 
 @enduml

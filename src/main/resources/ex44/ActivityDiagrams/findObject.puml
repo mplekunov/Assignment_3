@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get dbObjects collection;
+    :Get Object;
+
+    while(for each element in dbObjects collection)
+        :compare name property of an object to name property of element in dbObjects;
+        if (they are equal) is (True) then
+            :Return an object from dbObjects;
+        endif;
+    endwhile
+
+    if (no object with similar name was found)
+        :Return null;
+    endif
+
+@enduml

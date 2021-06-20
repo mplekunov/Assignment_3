@@ -1,9 +1,0 @@
-@startuml
-'https://plantuml.com/activity-diagram-beta
-
-start
-    #yellow:Read from Console;
-    #palegreen:Return input;
-stop
-
-@enduml

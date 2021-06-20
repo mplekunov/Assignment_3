@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get string to convert;
+    :Split given string using "\n" delimiter;
+
+    while (for each new string)
+        :Split string using "," delimiter;
+        :Collect strings into an Array;
+        :Put Strings into Employee object;
+        :Add Employee object to employees collection;
+    endwhile
+
+    :Return employees collection;
+
+@enduml

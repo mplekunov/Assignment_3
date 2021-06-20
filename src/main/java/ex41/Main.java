@@ -19,14 +19,10 @@ public class Main {
 
         String fileName = openFile();
 
-        writeNames(sortedList, fileName);
+        var outputName = new OutputName(sortedList, fileName);
+        outputName.write();
     }
 
-    /**
-     * Tries to open file using pre-defined file name. If file already exists, asks
-     * @return Name of the file in String format
-     * @throws IOException - if problem occurs during writing
-     */
     public static String openFile() throws IOException {
         String fileName = "output.txt";
         System.out.printf("Name of the file for output specified by default is %s", fileName);
@@ -35,7 +31,7 @@ public class Main {
         String userInput = "";
 
         while (file.exists()) {
-            ConsoleIn consoleInput = new ConsoleIn();
+            var consoleInput = new ConsoleIn();
             System.out.printf("File with the name \"%s\" already exists. Do you want to specify another name? (Yes, No) ", fileName);
 
                 userInput = consoleInput.read();
@@ -78,10 +74,5 @@ public class Main {
         }
 
         return nameList;
-    }
-
-    public static void writeNames(List<Name> names, String fileName) throws IOException {
-        OutputName outputName = new OutputName(names, fileName);
-        outputName.write();
     }
 }

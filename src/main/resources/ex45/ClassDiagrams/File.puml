@@ -2,13 +2,13 @@
 'https://plantuml.com/class-diagram
 
 class File {
-    -String: relativePath;
-    -String: fileName;
+    -String relativePath
+    -String fileName
 
-    +File(relativePath, fileName)
+    +File(String relativePath, String fileName)
 
-    +void: writeLine(input)
-    +String: readAllLines()
+    +void writeLine(String input)
+    +String readAllLines()
 }
 
 @enduml

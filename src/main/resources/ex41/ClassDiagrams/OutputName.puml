@@ -1,14 +1,13 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class OutputName implements Output {
-    -names: List<Name>
-    -fileName: String
+class OutputName {
+    -List<Name> names
+    -String fileName
 
-    +OutputName(names: List<Name>, fileName: String)
+    +OutputName(List<Name> names, String fileName)
+
+    +void write()
 }
 
-interface Output {
-    +write(): void
-}
 @enduml

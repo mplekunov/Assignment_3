@@ -2,17 +2,20 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Ask to print Names in the specific format;
+    :Ask for list of names;
 
-    while(user_input != keyword)
-        :Read Input from Console;
-        if (user_input != keyword) then
-            #yellow:Convert user_input to Name object;
-            :Add Name object to collection;
+    while (true)
+        :Read input from console;
+
+        if (input == done)
+            break
+        else (True)
+            :Convert input to Name object;
+            :Add Name to the list;
+
         endif
     endwhile
 
-   #palegreen:Return Collection of Name objects;
-stop
+    :Return list with names;
 
 @enduml

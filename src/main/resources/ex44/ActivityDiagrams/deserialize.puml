@@ -2,7 +2,9 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get String in Json format;
-    :Deserialize string into objects;
-    :Return Objects;
+    :Get string to parse;
+
+    :Deserialize string into collection of objects;
+
+    :Return collection of Objects;
 @enduml

@@ -2,25 +2,29 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Define fileName;
-    while (File fileName exists)
-        :Ask user if they want to change name of the output file;
-        :Read user_input;
+    :Get default fileName;
+    :Output default fileName into console;
 
-        switch (user_input?)
-        case (Yes)
-            :Ask for the new name of the file;
-            :Assign new name to the fileName;
-        case (No)
-            :Do nothing;
+    while(file exists)
+        :Output file exists message;
+        :Ask if another fileName should be used;
+
+         switch (answer)
+         case (yes)
+            :Ask for new fileName;
+            :Change fileName;
+         case (no)
+             :Use default fileName;
         endswitch
 
-        if (user_input?) is (No) then
+        if (answer was no)
             break
         endif
     endwhile
 
+    if (answer was yes) then
+        :Create new File;
+
     :Return fileName;
-stop
 
 @enduml

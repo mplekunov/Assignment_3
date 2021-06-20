@@ -2,8 +2,13 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get collection of Employee objects;
-    :Sort this collection by Salary;
-    #palegreen:Return sorted collection;
-    kill
+    :Get employees collection;
+
+    while(for each employee object in employees collection)
+        :Compare each object by salary;
+        :Add employee object with higher salary above the one with lower;
+    endwhile
+
+    :Return sorted employees collection;
+
 @enduml

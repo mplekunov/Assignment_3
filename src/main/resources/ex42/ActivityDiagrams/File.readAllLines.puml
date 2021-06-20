@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get file name;
+    :Get file path;
+    :Read everything from a file;
+    :Return file content as string;
+
+@enduml

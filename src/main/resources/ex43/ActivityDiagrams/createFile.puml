@@ -2,14 +2,18 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get relativePath;
-    :Get fileName;
+    :Get file name;
+    :Ger file path;
 
-    if (File with fileName) is (Exists) then
-        #pink:throw exception;
+    if (file with such name already exists) then
+            :throw an exception;
+        endif
+
+    if (create_file()) is (True) then
+        :Return success message;
+        kill
+    else
+        :Return error message;
         kill
     endif
-
-    :Create File;
-
 @enduml

@@ -2,21 +2,12 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-if (obj_1.lastName or obj_2.lastName) is (Empty) then
-    #pink:throw exception;
-    kill
-endif
+    :Get current object's properties;
+    :Get name's properties;
 
-if (obj_1.lastName < obj_2.lastName) then
-    #palegreen:Return -1;
-elseif (obj_1.lastName == obj_2.lastName) then
-    #palegreen:Return 0;
-elseif (obj_1.lastName > obj_2.lastName)
-    #palegreen:Return 1;
-else (Error)
-    #pink:throw exception;
-    kill
-endif
-stop
+    if (obj.lastname is empty or name.lastname is empty) then
+        :throw exception;
+    endif
 
+    :Return obj.lastname.compareTo(name.lastname);
 @enduml

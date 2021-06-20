@@ -1,8 +1,0 @@
-@startuml
-'https://plantuml.com/activity-diagram-beta
-
-start
-    :Get website;
-    :Generate index File using specific formatting;
-    :Return operation status;
-@enduml

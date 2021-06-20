@@ -3,14 +3,18 @@
 
 start
     :Get text;
-    while (there are words in text)
-        :read word;
-        if (word is in HashMap) is (True) then
-            :increment counter;
-        else (False)
-            :add word into hashmap and increment counter;
+    :Get pattern for a word;
+
+    :Split text on words using pattern;
+
+    while (for each word)
+        if (word exist in a hashmap) is (yes) then
+            :increment its value;
+        else (no)
+            :add word to hashmap and set its value to 1;
         endif
     endwhile
-    :Return HashMap;
+
+    :Return hashmap;
 
 @enduml

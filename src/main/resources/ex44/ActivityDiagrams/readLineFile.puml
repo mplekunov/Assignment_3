@@ -1,9 +1,0 @@
-@startuml
-'https://plantuml.com/activity-diagram-beta
-
-start
-    :Get File;
-    :Read line from File;
-    :Return String;
-
-@enduml

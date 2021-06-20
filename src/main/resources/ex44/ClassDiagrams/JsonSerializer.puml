@@ -1,12 +1,11 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class JsonSerializer {
-    -Type: dbTypeToken
+class JsonSerializer<T> {
+    -Type token
 
-    +JsonSerializer(dbTypeToken)
+    +JsonSerializer(Type token)
 
-    +String: serialize(objects)
+    +String serialize(List<T> objects)
 }
-
 @enduml

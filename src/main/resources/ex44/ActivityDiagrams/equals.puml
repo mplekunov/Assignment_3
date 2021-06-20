@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get object to compare -> obj;
+    :Get object of current instance -> this;
+
+    if (obj == this) then
+        :return true;
+        kill
+    endif
+
+    if (obj is null) then
+        :return false;
+        kill
+    endif
+
+    if (class of obj == class of this) then
+        :Compare their name, price, quantity;
+        :Return result;
+        kill
+    else if (class of obj == string)
+        :Compare their name;
+        :Return result;
+        kill
+    else
+        :Return false;
+        kill
+
+    endif
+
+
+@enduml

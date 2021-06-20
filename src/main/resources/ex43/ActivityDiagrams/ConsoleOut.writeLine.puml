@@ -1,0 +1,7 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get input String;
+    :Print input string in Console;
+@enduml

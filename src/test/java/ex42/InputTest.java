@@ -25,8 +25,8 @@ class InputTest {
     @Test
     @DisplayName("Input string from Input Stream corresponds to the expected string")
     void readLine() {
-//        System.setIn(new ByteArrayInputStream(("Test").getBytes()));
-//        Input input = new Input(System.in);
-//        assertEquals("Test", input.readLine());
+        System.setIn(new ByteArrayInputStream(("Test").getBytes()));
+        var input = new ConsoleIn();
+        assertEquals("Test", input.readLine());
     }
 }

@@ -1,8 +1,0 @@
-@startuml
-'https://plantuml.com/activity-diagram-beta
-
-start
-:Return First Name;
-stop
-
-@enduml

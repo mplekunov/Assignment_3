@@ -2,12 +2,11 @@
 'https://plantuml.com/class-diagram
 
 class JsonDeserializer<T> {
-    -Database<T>: db
-    -Type: dbTypeToken
+    -Database<T> db
+    -Type token
 
-    +JsonDeserializer(dbTypeToken)
-
-    +List<T>: deserialize(strToParse)
+    +JsonDeserializer(Type token)
+    +List<T> deserialize(String strToParse)
 }
 
 @enduml

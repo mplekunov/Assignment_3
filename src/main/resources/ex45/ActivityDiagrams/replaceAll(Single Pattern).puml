@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    'Recursive function, returns number of replacements made in the text'
+    :Get pattern Pair;
+    :Get text;
+
+    if (pattern is found in text) then
+        if (element used to replace is "") then
+            :Replace first occurrence of a pattern + whitespace;
+        else
+            :Replace first occurrence of a pattern;
+        endif
+
+        :Return 1 + call_to_this_function_with_same_arguments;
+    endif
+
+        :Return 0;
+
+@enduml

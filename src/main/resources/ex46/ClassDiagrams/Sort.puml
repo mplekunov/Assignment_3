@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Sort {
+    -Sort()
+
+    +LinkedHashMap<String, Integer> sortByValue(Map<String, Integer> collection)
+}
+
+@enduml

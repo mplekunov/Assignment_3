@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ConsoleIn {
+    -Scanner scanner
+
+    +String read()
+}
+
+@enduml

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class NameConverterTest {
 
     @Test
-    @DisplayName("")
+    @DisplayName("converts string into object")
     void convertToName() {
         String fullName = "Henry, Prince";
         Name name = new Name("Prince", "Henry");

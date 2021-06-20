@@ -3,8 +3,10 @@
 
 start
     :Get dbFile;
-    :Read dbFile content;
-    :deserialize();
-    :Return Object collection;
+
+    :Read everything from dbFile into string;
+    :Deserialize that string into collection of Objects;
+
+    :Return collection of Objects;
 
 @enduml

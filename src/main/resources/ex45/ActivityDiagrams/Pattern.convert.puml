@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get pattern string;
+    :Split each pair in pattern string using "\n" delimiter;
+
+    while(for each pair)
+        :Convert them into pair data type;
+        :Add pair data type to collection of pairs;
+    endwhile;
+
+    :Return collection of pairs;
+
+@enduml

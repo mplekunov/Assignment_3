@@ -2,8 +2,10 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get File;
-    :Add object into dbObjects;
-    :Serialize dbObjects;
-    :Write serialized string into file;
+    :Get object;
+
+    :Add object to dbObjects collection;
+    :Serialize dbObjects collection;
+    :Write serialized string into the output file;
+
 @enduml

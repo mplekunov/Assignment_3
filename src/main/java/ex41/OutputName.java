@@ -10,18 +10,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Output collection of Name objects into File
- */
 public class OutputName {
     private final List<Name> names;
     private final String fileName;
 
-    /**
-     * Default InputName constructor.
-     * @param names collection of Name objects to be outputted
-     * @param fileName name of the file into which output will be printed
-     */
     public OutputName(List<Name> names, String fileName) {
         this.fileName = fileName;
         this.names = new ArrayList<>();

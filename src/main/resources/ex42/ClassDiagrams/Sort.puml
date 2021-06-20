@@ -2,6 +2,9 @@
 'https://plantuml.com/class-diagram
 
 class Sort {
-    +List<Employee> SortEmployeesBySalary(employees)
+    -Sort()
+
+    +List<Employee> sortEmployeesBySalary(List<Employee> employees)
 }
+
 @enduml

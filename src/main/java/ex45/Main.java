@@ -10,8 +10,8 @@ import java.nio.file.Paths;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        var fileIn = new File(Paths.get("").toAbsolutePath().toString().concat("\\src\\main\\resources\\ex45\\"), "exercise45_input.txt");
-        var matcher = new File(Paths.get("").toAbsolutePath().toString().concat("\\src\\main\\resources\\ex45\\"), "pattern.txt");
+        var fileIn = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\ex45\\"), "exercise45_input.txt");
+        var matcher = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\ex45\\"), "pattern.txt");
 
         TextManager textManager = new TextManager(fileIn.readAllLines());
 
@@ -21,7 +21,7 @@ public class Main {
         cout.writeLine("Enter the name of output file (e.g. output.txt): ");
         String outputFileName = cin.readLine();
 
-        File fileOut = new File(Paths.get("").toAbsolutePath().toString().concat("\\src\\main\\resources\\ex45\\"), outputFileName);
+        File fileOut = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\ex45\\"), outputFileName);
 
         int counter = textManager.replaceAll(Pattern.convert(matcher.readAllLines()));
 

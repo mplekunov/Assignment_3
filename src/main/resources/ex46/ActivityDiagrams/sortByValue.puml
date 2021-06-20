@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get map collection;
+
+    while(for each pair in a map)
+        :Compare each pair by value;
+        :Move pair with higher value above the others;
+    endwhile
+
+    :Return sortedMap;
+
+@enduml

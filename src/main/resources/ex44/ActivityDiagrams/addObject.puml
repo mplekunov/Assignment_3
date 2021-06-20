@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get object;
+
+    while (for each element in dbObjects collection)
+        :Compare object with an element in dbObjects;
+        if (they are equal)
+            :throw exception;
+        endif
+    endwhile
+
+    :uploadObjectToDb(object);
+
+@enduml

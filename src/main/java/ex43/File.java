@@ -23,10 +23,6 @@ public class File {
         Files.writeString(Paths.get(relativePath + fileName), input);
     }
 
-    public String readLine() throws IOException {
-        return Files.readString(Paths.get(relativePath + fileName));
-    }
-
     public String readAllLines() throws IOException {
         return Files.readAllLines(Paths.get(relativePath + fileName)).stream().map(String::toString).collect(Collectors.joining("\n"));
     }

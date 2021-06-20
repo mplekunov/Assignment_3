@@ -2,17 +2,16 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get Folder name;
-    :Get Folder Type;
+    :Get folder type;
+    :Get folder name;
+    :Get additionalFolders collection;
 
-    if (additionalFolders have Type) is (Yes) then
-        #pink:throw exception Type duplicate;
-        kill
-    endif
-    if (additionalFolders have name) is (Yes) then
-        #pink:throw exception name duplicate;
-        kill
+    if(folder type already exists in collection)
+        :throw exception;
     endif
 
-    :add Type, name pair into additionalFolders;
+    if(file name already exists in collection)
+        :throw exception;
+
+    :Add folder type and folder name into additionalFolders collection;
 @enduml

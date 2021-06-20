@@ -2,14 +2,14 @@
 'https://plantuml.com/class-diagram
 
 class WebsiteGenerator {
-    +Website: website;
-    +String: relativePath;
+    -Website website
+    -String relativePath
 
-    +WebsiteGenerator(website, relativePath)
+    +WebsiteGenerator(Website website, String relativePath)
 
-    +String: generateWebsite()
-    -String: generateFolder(folderName)
-    -String: generateIndexFile()
+    +String generateWebsite()
+    +String generateFolder(String folderName)
+    +String generateIndexFile()
 
 }
 

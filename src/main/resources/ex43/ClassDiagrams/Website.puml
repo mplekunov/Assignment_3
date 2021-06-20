@@ -2,16 +2,16 @@
 'https://plantuml.com/class-diagram
 
 class Website {
-    -String: websiteName;
-    -String: author;
-    -HashMap<FolderType, String>: additionalFolders;
+    -String websiteName
+    -String authorName
+    -HashMap<FolderType, String> additionalFolders
 
-    +Website(websiteName, author)
-    +Website(websiteName, author, additionalFolders)
+    -Website(String websiteName, String authorName)
+    +Website(String websiteName, String authorName, HashMap<FolderType, String> additionalFolders)
 
-    +void: addFolder(folderType, folderName)
-    +String: getWebsiteName()
-    +String getAuthorName()
-    +HashMap<FolderType, String>: getFolders()
+    +void addFolder(FolderType folderType, String folderName)
+    +HashMap<FolderType, String> getAdditionalFolders()
+    +String getAuthor()
+    +String getWebsiteName()
 }
 @enduml

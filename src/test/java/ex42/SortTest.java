@@ -30,7 +30,7 @@ class SortTest {
                 new Employee("Jones", "Aaron", 46000)
         ));
 
-        List<Employee> actual = Sort.sortEmployeesByCollection(employees);
+        List<Employee> actual = Sort.sortEmployeesBySalary(employees);
 
         for (int i = 0; i < expected.size(); i++) {
             assertEquals(expected.get(i).getSalary(), actual.get(i).getSalary());

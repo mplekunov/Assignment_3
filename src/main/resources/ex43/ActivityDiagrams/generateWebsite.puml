@@ -2,14 +2,13 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get website;
+    :generateFolder(root_folder) and add status message to output;
 
-    while (For each pair in additionalFolders)
-        :Get folderName;
-        :Call generateFolder();
-    endwhile;
+    while(for each element in additionalFolders)
+        :generateFolder(element) and add status message to output;
+    endwhile
 
-    :Call generateIndexFile();
+    :generateIndexFile() and add status message to output;
 
-    :Return operation status;
+    :Return output string;
 @enduml

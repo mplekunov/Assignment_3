@@ -1,7 +1,0 @@
-@startuml
-'https://plantuml.com/activity-diagram-beta
-
-start
-    :Return additionalFolders;
-
-@enduml

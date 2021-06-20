@@ -1,7 +1,0 @@
-@startuml
-'https://plantuml.com/activity-diagram-beta
-
-start
-    :Read Line from Console;
-    #palegreen:Return String containing input;
-@enduml

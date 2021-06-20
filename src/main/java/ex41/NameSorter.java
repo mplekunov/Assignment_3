@@ -10,27 +10,13 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Sorts Name object in the given format
- */
 public class NameSorter {
     private final List<Name> names;
 
-    /**
-     * Constructs an empty NameSorter object.
-     */
     private NameSorter() {
         names = new ArrayList<>();
     }
 
-    /**
-     * Constructs a NameSorter object containing the elements of the specified
-     * collection, in the order they are returned by the collection's
-     * iterator.
-     *
-     * @param nameCollection the collection whose elements are to be placed into this list
-     * @throws NullPointerException if the specified collection is null
-     */
     public NameSorter(List<Name> nameCollection)
         throws NullPointerException {
 

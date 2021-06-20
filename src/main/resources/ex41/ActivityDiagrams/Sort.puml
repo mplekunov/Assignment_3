@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get name collection;
+    :Compare each lastName in name collection with each other;
+    :Collect compared names in ascending order in list;
+    :Return List;
+
+@enduml

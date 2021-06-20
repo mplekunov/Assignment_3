@@ -2,7 +2,9 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-    :Get object collection;
-    :Serialize object collection;
-    :Return String;
+    :Get objects collection;
+
+    :Serialize objects collection into string;
+
+    :Return serialized string;
 @enduml

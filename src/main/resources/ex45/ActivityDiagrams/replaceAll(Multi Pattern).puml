@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get collection of pattern pairs ;
+
+    while (for each element in a collection)
+        :replaceAll(values of an element) and add return value to the counter;
+    endwhile
+
+    :Return counter;
+@enduml

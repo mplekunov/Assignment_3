@@ -2,21 +2,18 @@
 'https://plantuml.com/class-diagram
 
 class Database<T> {
-    -String: dbFileName
-    -String: relativePath
-    -List<T>: dbObjects
-    -Type: dbTypeToken
+    -List<T> dbObjects
+    -File dbFile
+    -Type token
 
-    +Database(relativePath, dbFileName, dbTypeToken)
-    +Database(dbTypeToken)
-    +Database(List<T> dbObjects)
+    +Database(File dbFile, Type token)
+    +Database(Type token)
+    +Database(List<T> objects, Type token)
 
-    +T: findObject(objName)
-    +void: addObject(obj)
-    +List<T>: getDbObjects();
-
-    -void: uploadObjectToDb(obj)
-    -List<T>: downloadObjectFromDb()
+    +T findObject(String name)
+    +void addObject(T obj)
+    +void uploadObjectToDb(T obj)
+    +List<T> downloadObjectFromDb()
+    +List<T> getDbObjects
 }
-
 @enduml
