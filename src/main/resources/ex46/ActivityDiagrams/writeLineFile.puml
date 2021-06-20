@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get File;
+    :Get input String;
+    :Write input into the file;
+
+@enduml

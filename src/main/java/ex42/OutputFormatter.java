@@ -17,7 +17,7 @@ public final class OutputFormatter {
         int lastNameLength = employees.stream().map(o -> o.getLastName().length()).max(Comparator.comparing(Integer::intValue)).get() + 1;
         int salaryLength = employees.stream().map(o -> String.valueOf(o.getSalary()).length()).max(Comparator.comparing(Integer::intValue)).get() + 1;
 
-        StringBuilder sBuilder = new StringBuilder();
+        var sBuilder = new StringBuilder();
 
         sBuilder.append(String.format("%-" + lastNameLength + "s%-" + firstNameLength + "s%-" + salaryLength + "s\n", "Last", "First", "Salary"));
 

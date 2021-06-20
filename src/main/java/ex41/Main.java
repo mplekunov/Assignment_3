@@ -13,10 +13,12 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        NameSorter nameSorter = new NameSorter(readNames());
+        var nameSorter = new NameSorter(readNames());
+
         List<Name> sortedList = nameSorter.sort();
 
         String fileName = openFile();
+
         writeNames(sortedList, fileName);
     }
 
@@ -29,11 +31,11 @@ public class Main {
         String fileName = "output.txt";
         System.out.printf("Name of the file for output specified by default is %s", fileName);
 
-        File file = new File(fileName);
+        var file = new File(fileName);
         String userInput = "";
 
         while (file.exists()) {
-            ConsoleInput consoleInput = new ConsoleInput();
+            ConsoleIn consoleInput = new ConsoleIn();
             System.out.printf("File with the name \"%s\" already exists. Do you want to specify another name? (Yes, No) ", fileName);
 
                 userInput = consoleInput.read();
@@ -61,9 +63,9 @@ public class Main {
         System.out.println("Enter list of name in the format: \"Last Name, First Name\"" +
                            "\nEnter \"done\" when you are done with input");
 
-        NameConverter inputName = new NameConverter();
-        ConsoleInput consoleInput = new ConsoleInput();
-        List<Name> nameList = new ArrayList<>();
+        var inputName = new NameConverter();
+        var consoleInput = new ConsoleIn();
+        var nameList = new ArrayList<Name>();
         String input;
 
         while (true) {

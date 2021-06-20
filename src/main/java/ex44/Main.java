@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Mikhail Plekunov
+ */
+
 package ex44;
 
 import com.google.gson.reflect.TypeToken;
@@ -8,8 +13,8 @@ import java.nio.file.Paths;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Type productToken = new TypeToken<Database<Product>>(){}.getType();
-        var file = new File(Paths.get("").toAbsolutePath().toString().concat("\\src\\main\\java\\ex44\\"), "exercise44_input.json");
+        var productToken = new TypeToken<Database<Product>>(){}.getType();
+        var file = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\ex44\\"), "exercise44_input.json");
 
         var productDb = new Database<Product>(file, productToken);
 
@@ -17,9 +22,10 @@ public class Main {
         var cout = new ConsoleOut();
 
         Product product;
+
         while (true) {
             cout.writeLine("What is the product name? ");
-            var input = cin.readLine();
+            String input = cin.readLine();
             product = productDb.findObject(input);
 
             if (product == null) {
@@ -28,13 +34,13 @@ public class Main {
 
                 if (input.equalsIgnoreCase("y")) {
                     cout.writeLine("Enter product Name: ");
-                    var name = cin.readLine();
+                    String name = cin.readLine();
 
                     cout.writeLine("Enter product Price: ");
-                    var price = cin.readLine();
+                    String price = cin.readLine();
 
                     cout.writeLine("Enter product Quantity: ");
-                    var quantity = cin.readLine();
+                    String quantity = cin.readLine();
 
                     productDb.addObject(new Product(name, Double.parseDouble(price), Integer.parseInt(quantity)));
                     break;

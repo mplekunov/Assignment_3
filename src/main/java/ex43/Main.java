@@ -11,8 +11,8 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        ConsoleIn cin = new ConsoleIn();
-        ConsoleOut cout = new ConsoleOut();
+        var cin = new ConsoleIn();
+        var cout = new ConsoleOut();
 
         cout.writeLine("Site name: ");
         String websiteName = cin.readLine();
@@ -26,16 +26,16 @@ public class Main {
         cout.writeLine("Do you want a folder for CSS? ");
         String isCSS = cin.readLine();
 
-        HashMap<FolderType, String> folders = new HashMap<>();
+        var folders = new HashMap<FolderType, String>();
 
         if (isJS.equalsIgnoreCase("y"))
             folders.put(FolderType.JS, "js");
         if (isCSS.equalsIgnoreCase("y"))
             folders.put(FolderType.CSS, "css");
 
-        Website website = new Website(websiteName, author, folders);
+        var website = new Website(websiteName, author, folders);
 
-        WebsiteGenerator websiteGenerator = new WebsiteGenerator(website, Paths.get("").toAbsolutePath().toString());
+        var websiteGenerator = new WebsiteGenerator(website, Paths.get("").toAbsolutePath().toString());
 
         cout.writeLine(websiteGenerator.generateWebsite());
     }

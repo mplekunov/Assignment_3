@@ -5,13 +5,16 @@
 
 package ex43;
 
-import java.io.IOException;
+import java.io.PrintStream;
 
-public class ConsoleOut implements Out{
-    public ConsoleOut() {}
+public class ConsoleOut {
+    private final PrintStream printStream;
 
-    @Override
-    public void writeLine(String input) throws IOException {
-        System.out.print(input);
+    public ConsoleOut() {
+        this.printStream = System.out;
+    }
+
+    public void writeLine(String input) {
+        printStream.print(input);
     }
 }

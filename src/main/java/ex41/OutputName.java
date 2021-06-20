@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Output collection of Name objects into File
  */
-public class OutputName implements Output{
+public class OutputName {
     private final List<Name> names;
     private final String fileName;
 
@@ -28,9 +28,8 @@ public class OutputName implements Output{
         this.names.addAll(names);
     }
 
-    @Override
     public void write() throws IOException {
-        FileWriter fileWriter = new FileWriter(fileName);
+        var fileWriter = new FileWriter(fileName);
         fileWriter.write(String.format(
                 """
                 Total of %d names

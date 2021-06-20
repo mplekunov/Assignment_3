@@ -32,9 +32,8 @@ class FileOutTest {
         File file = new File(path + name);
         file.createNewFile();
 
-        FileOut fileOut = new FileOut(path, name);
+        ex43.File fileOut = new ex43.File(path, name);
         fileOut.writeLine("test");
-        fileOut.close();
 
         BufferedReader bReader = new BufferedReader(new FileReader(path + name));
         assertEquals("test", bReader.readLine());

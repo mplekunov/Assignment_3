@@ -6,25 +6,22 @@
 package ex42;
 
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        FileIn fileIn = new FileIn("src\\main\\java\\ex42\\exercise42_input.txt");
-        FileOut fileOut = new FileOut("src\\main\\java\\ex42\\output.txt");
 
-        String input;
-        List<Employee> employees = new ArrayList<>();
+        var fileIn = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\ex42\\"), "exercise42_input.txt");
+        var fileOut = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\ex42\\"), "output.txt");
 
-        while ((input = fileIn.readLine()) != null) {
-            Employee employee = InputFormatter.convertStringToEmployee(input);
-            employees.add(employee);
-        }
+        String input = fileIn.readAllLines();
+
+        List<Employee> employees = InputFormatter.convertStringToEmployee(input);
 
         List<Employee> employeesSortedBySalary = Sort.sortEmployeesByCollection(employees);
 
         fileOut.writeLine(OutputFormatter.convertEmployeeToString(employeesSortedBySalary));
-        fileOut.close();
     }
 }

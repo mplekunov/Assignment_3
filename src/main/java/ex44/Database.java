@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Mikhail Plekunov
+ */
+
 package ex44;
 
 import com.google.gson.annotations.SerializedName;
@@ -46,7 +51,7 @@ public class Database<T> {
 
         var serializer = new JsonSerializer<T>(token);
 
-        var output = serializer.serialize(dbObjects);
+        String output = serializer.serialize(dbObjects);
 
         dbFile.writeLine(output);
     }
@@ -54,7 +59,7 @@ public class Database<T> {
     private List<T> downloadObjectFromDb()
             throws IOException{
 
-        var output = dbFile.readAllLines();
+        String output = dbFile.readAllLines();
 
         var deserializer = new JsonDeserializer<T>(token);
 

@@ -18,7 +18,7 @@ public class FileManager {
 
     public String createFolder(String folderName)
             throws FileAlreadyExistsException {
-        File file = new File(relativePath + folderName);
+        var file = new File(relativePath + folderName);
 
         if (file.exists())
             throw new FileAlreadyExistsException(String.format("Folder %s already exists in the %s", folderName, relativePath));
@@ -31,7 +31,7 @@ public class FileManager {
 
     public String createFile(String fileName)
             throws IOException {
-        File file = new File(relativePath + fileName);
+        var file = new File(relativePath + fileName);
 
         if (file.exists())
             throw new FileAlreadyExistsException(String.format("File %s already exists in the %s", fileName, relativePath));

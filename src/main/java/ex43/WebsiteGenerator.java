@@ -18,7 +18,7 @@ public class WebsiteGenerator {
     }
 
     public String generateWebsite() throws IOException {
-        StringBuilder sBuilder = new StringBuilder();
+        var sBuilder = new StringBuilder();
 
         sBuilder.append(generateFolder(website.getWebsiteName()));
         relativePath = relativePath.concat(website.getWebsiteName()).concat("\\");
@@ -41,12 +41,12 @@ public class WebsiteGenerator {
     }
 
     private String generateFolder(String folderName) throws FileAlreadyExistsException {
-        FileManager fileManager = new FileManager(relativePath);
+        var fileManager = new FileManager(relativePath);
         return String.valueOf(fileManager.createFolder(folderName));
     }
 
     private String generateIndexFile() throws IOException {
-        FileOut fileOut = new FileOut(relativePath, "index.html");
+        var fileOut = new File(relativePath, "index.html");
 
         fileOut.writeLine(String.format(
                 """
@@ -56,8 +56,6 @@ public class WebsiteGenerator {
                         <meta name="author" content="%s">
                     </head>
                 </html>""", website.getWebsiteName(), website.getAuthor()));
-
-        fileOut.close();
 
         return String.format("Created %s\n", (relativePath + "index.html"));
     }

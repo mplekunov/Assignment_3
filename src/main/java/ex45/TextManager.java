@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Mikhail Plekunov
+ */
+
 package ex45;
 
 import org.javatuples.Pair;
@@ -30,6 +35,7 @@ public class TextManager {
 
     public int replaceAll(List<Pair<String, String>> matcher) {
         var wrapper = new Object() {int counter = 0;};
+
         matcher.forEach(o -> wrapper.counter += replaceAll(o.getValue0(), o.getValue1()));
 
         return wrapper.counter;

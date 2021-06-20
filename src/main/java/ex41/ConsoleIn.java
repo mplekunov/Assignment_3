@@ -7,15 +7,14 @@ package ex41;
 
 import java.util.Scanner;
 
-public class ConsoleInput implements Input<String> {
+public class ConsoleIn {
     private final static Scanner scanner = new Scanner(System.in);
 
     /**
      * Default ConsoleInput Constructor
      */
-    public ConsoleInput() {}
+    public ConsoleIn() {}
 
-    @Override
     public String read() {
         return scanner.nextLine();
     }

@@ -7,12 +7,13 @@ package ex43;
 
 import java.util.Scanner;
 
-public class ConsoleIn implements In{
-    private final static Scanner scanner = new Scanner(System.in);
+public class ConsoleIn {
+    private final Scanner scanner;
 
-    public ConsoleIn() {}
+    public ConsoleIn() {
+        this.scanner = new Scanner(System.in);
+    }
 
-    @Override
     public String readLine() {
         return scanner.nextLine();
     }

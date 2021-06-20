@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+    :Get text;
+    while (there are words in text)
+        :read word;
+        if (word is in HashMap) is (True) then
+            :increment counter;
+        else (False)
+            :add word into hashmap and increment counter;
+        endif
+    endwhile
+    :Return HashMap;
+
+@enduml

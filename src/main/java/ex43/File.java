@@ -1,0 +1,33 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Mikhail Plekunov
+ */
+
+package ex43;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Collectors;
+
+public class File {
+    private final String relativePath;
+    private final String fileName;
+
+    public File(String relativePath, String fileName) {
+        this.relativePath = relativePath;
+        this.fileName = fileName;
+    }
+
+    public void writeLine(String input) throws IOException {
+        Files.writeString(Paths.get(relativePath + fileName), input);
+    }
+
+    public String readLine() throws IOException {
+        return Files.readString(Paths.get(relativePath + fileName));
+    }
+
+    public String readAllLines() throws IOException {
+        return Files.readAllLines(Paths.get(relativePath + fileName)).stream().map(String::toString).collect(Collectors.joining("\n"));
+    }
+}

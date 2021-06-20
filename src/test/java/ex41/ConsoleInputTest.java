@@ -22,7 +22,7 @@ class ConsoleInputTest {
     void read() {
         System.setIn(new ByteArrayInputStream(("File Name\n").getBytes()));
 
-        ConsoleInput consoleInput = new ConsoleInput();
+        ConsoleIn consoleInput = new ConsoleIn();
         assertEquals("File Name", consoleInput.read());
     }
 }
