@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        var file = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\ex46\\"), "exercise46_input.txt");
+        var file = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\main\\ex46\\"), "exercise46_input.txt");
 
         var textManager = new TextManager(file.readAllLines());
 

@@ -13,8 +13,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        var fileIn = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\ex42\\"), "exercise42_input.txt");
-        var fileOut = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\ex42\\"), "output.txt");
+        var fileIn = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\main\\ex42\\"), "exercise42_input.txt");
+        var fileOut = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\main\\ex42\\"), "output.txt");
 
         String input = fileIn.readAllLines();
 

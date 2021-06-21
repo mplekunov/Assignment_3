@@ -5,11 +5,10 @@
 
 package ex41;
 
-import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -17,42 +16,10 @@ public class Main {
 
         List<Name> sortedList = nameSorter.sort();
 
-        String fileName = openFile();
+        String fileName = Paths.get("").toAbsolutePath().toString().concat("\\resources\\main\\ex41\\output.txt");
 
         var outputName = new OutputName(sortedList, fileName);
         outputName.write();
-    }
-
-    public static String openFile() throws IOException {
-        String fileName = "output.txt";
-        System.out.printf("Name of the file for output specified by default is %s", fileName);
-
-        var file = new File(fileName);
-        String userInput = "";
-
-        while (file.exists()) {
-            var consoleInput = new ConsoleIn();
-            System.out.printf("File with the name \"%s\" already exists. Do you want to specify another name? (Yes, No) ", fileName);
-
-                userInput = consoleInput.read();
-
-                switch (userInput.toLowerCase(Locale.ROOT)) {
-                    case "yes":
-                        System.out.print("Enter the name of the output file including extension (e.g. output.txt): ");
-                        file = new File(consoleInput.read());
-                        break;
-                    case "no":
-                        break;
-                }
-
-            if (userInput.equalsIgnoreCase("no"))
-                break;
-        }
-
-        if (userInput.equalsIgnoreCase("yes"))
-            file.createNewFile();
-
-        return fileName;
     }
 
     public static List<Name> readNames() {

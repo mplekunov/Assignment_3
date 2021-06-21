@@ -35,7 +35,7 @@ public class Main {
 
         var website = new Website(websiteName, author, folders);
 
-        var websiteGenerator = new WebsiteGenerator(website, Paths.get("").toAbsolutePath().toString());
+        var websiteGenerator = new WebsiteGenerator(website, Paths.get("").toAbsolutePath().toString().concat("\\resources\\main\\ex43\\"));
 
         cout.writeLine(websiteGenerator.generateWebsite());
     }

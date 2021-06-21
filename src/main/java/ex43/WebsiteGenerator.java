@@ -14,7 +14,7 @@ public class WebsiteGenerator {
 
     public WebsiteGenerator(Website website, String relativePath) {
         this.website = website;
-        this.relativePath = relativePath.concat("\\resources\\ex43\\");
+        this.relativePath = relativePath;
     }
 
     public String generateWebsite() throws IOException {

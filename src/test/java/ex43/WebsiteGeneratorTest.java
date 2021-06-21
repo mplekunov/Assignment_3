@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Mikhail Plekunov
+ */
+
 package ex43;
 
 import org.junit.jupiter.api.AfterEach;
@@ -18,7 +23,7 @@ import java.util.stream.Collectors;
 import static org.junit.jupiter.api.Assertions.*;
 
 class WebsiteGeneratorTest {
-    private static final String path = Paths.get("").toAbsolutePath().toString().concat("\\src\\test\\java\\ex43\\");
+    private static final String path = Paths.get("").toAbsolutePath().toString().concat("\\resources\\test\\ex43\\");
     private static final Website website = new Website("PrinceLife", "Henry The Prince", new HashMap<>(Map.of(FolderType.JS, "js", FolderType.CSS, "css")));
 
     boolean deleteFiles(File file) {

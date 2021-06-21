@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Mikhail Plekunov
+ */
+
 package ex41;
 
 import org.junit.jupiter.api.DisplayName;
@@ -26,10 +31,10 @@ class OutputNameTest {
         NameSorter nameSorter = new NameSorter(nameCollection);
         List<Name> actualSorted = nameSorter.sort();
 
-        final File expected = new File("src\\test\\java\\ex41\\expected.txt");
-        final File actual = new File("src\\test\\java\\ex41\\actual.txt");
+        final File expected = new File("resources\\test\\ex41\\expected.txt");
+        final File actual = new File("resources\\test\\ex41\\actual.txt");
 
-        OutputName outputName = new OutputName(actualSorted, "src\\test\\java\\ex41\\actual.txt");
+        OutputName outputName = new OutputName(actualSorted, "resources\\test\\ex41\\actual.txt");
         outputName.write();
 
         BufferedReader brExpected = new BufferedReader(new FileReader(expected));

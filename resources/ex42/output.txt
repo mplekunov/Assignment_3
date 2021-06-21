@@ -1,8 +1,0 @@
-Last     First    Salary  
-Xiong    Fong     $65,000.00
-Johnson  Jim      $56,500.00
-Ling     Mai      $55,900.00
-Zarnecki Sabrina  $51,500.00
-Jones    Aaron    $46,000.00
-Jones    Chris    $34,500.00
-Swift    Geoffrey $14,200.00

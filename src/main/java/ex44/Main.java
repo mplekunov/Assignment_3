@@ -14,7 +14,7 @@ import java.nio.file.Paths;
 public class Main {
     public static void main(String[] args) throws IOException {
         var productToken = new TypeToken<Database<Product>>(){}.getType();
-        var file = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\ex44\\"), "exercise44_input.json");
+        var file = new File(Paths.get("").toAbsolutePath().toString().concat("\\resources\\main\\ex44\\"), "exercise44_input.json");
 
         var productDb = new Database<Product>(file, productToken);
 

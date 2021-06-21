@@ -17,7 +17,7 @@ import java.nio.file.Paths;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FileManagerTest {
-    private static final String path = Paths.get("").toAbsolutePath().toString().concat("\\src\\test\\java\\ex43\\");
+    private static final String path = Paths.get("").toAbsolutePath().toString().concat("\\resources\\test\\ex43\\");
     private static final String name = "Test";
 
     @AfterEach
